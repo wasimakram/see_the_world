@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @activity.name
+%p
+  %b Location:
+  = @activity.location
+%p
+  %b Instruction:
+  = @activity.instruction
+%p
+  %b Price:
+  = @activity.price
+
+= link_to 'Edit', edit_activity_path(@activity)
+\|
+= link_to 'Back', activities_path

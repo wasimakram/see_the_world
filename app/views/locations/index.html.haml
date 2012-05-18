@@ -1,0 +1,25 @@
+%h1 Listing locations
+
+%table
+  %tr
+    %th Name
+    %th Place
+    %th Desc
+    %th Price
+    %th
+    %th
+    %th
+
+  - @locations.each do |location|
+    %tr
+      %td= location.name
+      %td= location.place
+      %td= location.desc
+      %td= location.price
+      %td= link_to 'Show', location
+      %td= link_to 'Edit', edit_location_path(location)
+      %td= link_to 'Destroy', location, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Location', new_location_path

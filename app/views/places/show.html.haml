@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @place.name
+%p
+  %b Desc:
+  = @place.desc
+
+= link_to 'Edit', edit_place_path(@place)
+\|
+= link_to 'Back', places_path
